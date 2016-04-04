@@ -24,7 +24,10 @@
 
 <h1 id="global-header"> Trader-Aid </h1>
 
-<p>{{#link-to "change-password"}}Change Password{{/link-to}}</p>
+<ul>
+  <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+  <li><<button type="submit" class="btn btn-default" {{action "submit"}}>Sign Out</button></li>
+</ul>
 
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
