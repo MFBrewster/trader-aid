@@ -1,2 +1,16 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+
+
+#global-header {
+    border-color: #291399;
+    border-width: 20px;
+    background-color: #6A56CC;
+    padding: 5px;
+    margin: 0 auto;
+    width: 40%;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+    color: #85B1FF;
+}
