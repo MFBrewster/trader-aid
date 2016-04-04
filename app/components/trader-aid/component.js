@@ -7,8 +7,8 @@ export default Ember.Component.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   actions: {
-    submit () {
-      this.sendAction('submit');
+    signOut () {
+      this.sendAction('signOut');
     }
   }
 });
