@@ -34,16 +34,16 @@ export default Ember.Service.extend({
     });
   },
 
-  // changePassword (passwords) {
-  //   return this.get('ajax').patch(`/change-password/${this.get('credentials.id')}`, {
-  //     data: {
-  //       passwords: {
-  //         old: passwords.previous,
-  //         new: passwords.next,
-  //       }
-  //     },
-  //   });
-  // },
+  changePassword (passwords) {
+    return this.get('ajax').patch(`/change-password/${this.get('credentials.id')}`, {
+      data: {
+        passwords: {
+          old: passwords.previous,
+          new: passwords.next,
+        }
+      },
+    });
+  },
 
   signOut () {
     return this.get('ajax').del(`/sign-out/${this.get('credentials.id')}`)
