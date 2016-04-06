@@ -6,15 +6,15 @@ export default Ember.Component.extend({
   user: Ember.computed.alias('auth.credentials.email'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
-  activate () {
-    if (!isAuthenticated) {
-      this.transitionTo('sign-in');
-    }
-  },
-
   actions: {
     signOut () {
       this.sendAction('signOut');
-    }
+    },
+    // signInView () {
+    //   this.render('sign-in', {
+    //     outlet: 'trader-aid',
+    //   });
+    },
+
   }
 });

@@ -2,13 +2,15 @@
 @import 'bootstrap/theme';
 
 $div-width: 300px;
+$tan: #FFE6C5;
+
 
 // body {
 //   margin-top: 3em;
 // }
 
 .nav-div {
-  background-color: #FFE6C5;
+  background-color: $tan;
   border-color: #85B1FF;
   border-width: 0 0 10px 0;
   border-bottom-style: solid;
@@ -33,6 +35,36 @@ $div-width: 300px;
 
 .main-page-box {
   margin: 0 1em 0 1em;
+}
+
+.main-app-window {
+  float: left;
+  border-style: solid;
+  border-width: 2px;
+  border-color: pink;
+  height: 10em;
+  width: 4em;
+  margin: 1em;
+}
+
+.product-half {
+  height: 30em;
+  width: $div-width * 1;
+  background-color: $tan * 1.05;
+  position: relative;
+  ul {
+    position: absolute;
+    bottom: 1em;
+    li {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 8px;
+      padding: 2px;
+      display: inline;
+    }
+  }
+
 }
 
 #global-header {

@@ -4,6 +4,11 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
 
+  activate() {
+    console.log('sign up')
+    this.transitionTo('sign-up');
+  },
+
   actions: {
     signUp (credentials) {
       this.get('auth').signUp(credentials)

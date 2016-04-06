@@ -19,8 +19,10 @@
 <div class="user-auth-box col-md-8 col-md-offset-2">
   {{outlet}}
 </div>
-{{#if isAuthenticated}}
+{{!-- {{#if isAuthenticated}}
   <div class="main-page-box col-md-8 col-md-offset-2">
     {{app-window}}
   </div>
-{{/if}}
+{{else}}
+  {{action signInView}}
+{{/if}} --}}
