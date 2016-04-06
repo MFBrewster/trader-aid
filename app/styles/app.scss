@@ -64,7 +64,20 @@ $tan: #FFE6C5;
       display: inline;
     }
   }
+}
 
+.product-button {
+  border-color: #291399;
+  border-width: 5px;
+  background-color: #6A56CC;
+  padding: 3px;
+  margin: 0 auto;
+  width: 3em;
+  height: 3em;
+  border-style: solid;
+  border-radius: 5px;
+  text-align: center;
+  color: #333;
 }
 
 #global-header {

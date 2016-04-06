@@ -1,6 +1,9 @@
-{{yield}}
+{{#each model as |product|}}
+  <div class="product-button">
+    <p><strong>{{product.name}}</strong></p>
+  </div>
+{{/each}}
 <ul>
-  {{!-- <li>{{#link-to "newProduct"}}>New Product{{/link-to}}</li> --}}
   <li>New Product</li>
   <li> Edit Products</li>
 </ul>

@@ -5,9 +5,14 @@ export default Ember.Route.extend({
   // user: Ember.computed.alias('auth.credentials.email'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
-  // activate () {
-  //   if (!this.get('isAuthenticated')) {
-  //     this.transitionTo('sign-in');
-  //   }
-  // },
+  model() {
+    console.log("Hitting the model");
+    return this.store.findAll('product');
+  },
+
+  activate () {
+    if (!this.get('isAuthenticated')) {
+      this.transitionTo('sign-in');
+    }
+  },
 });

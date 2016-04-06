@@ -10,11 +10,6 @@ export default Ember.Component.extend({
     signOut () {
       this.sendAction('signOut');
     },
-    // signInView () {
-    //   this.render('sign-in', {
-    //     outlet: 'trader-aid',
-    //   });
-    },
 
   }
 });

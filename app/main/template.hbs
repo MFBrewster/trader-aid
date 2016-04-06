@@ -3,3 +3,7 @@
 <div id="order-half" class="main-app-window"></div>
 
 {{outlet}}
+
+{{#each model as |product|}}
+<p>{{product.name}}</p>
+{{/each}}

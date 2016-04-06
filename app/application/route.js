@@ -5,12 +5,6 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
   isAuthenticated: Ember.computed.bool('credentials.token'),
 
-  activate () {
-    if (!this.get('isAuthenticated')) {
-      this.transitionTo('sign-in');
-    }
-  },
-
   actions: {
     signOut () {
       this.get('auth').signOut()
