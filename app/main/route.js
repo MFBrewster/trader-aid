@@ -14,4 +14,10 @@ export default Ember.Route.extend({
       this.transitionTo('sign-in');
     }
   },
+
+  actions: {
+    createProduct (params) {
+      this.store.createRecord('product', params).save();
+    },
+  }
 });

@@ -10,15 +10,15 @@
   <h2>New Product</h2>
   <p class="header-description">Enter a new product or service to sell</p>
   <p>Product Name:</p>
-  {{input}}
-  <div class="right-align">Price: ${{input class="shorter-inline"}}</div>
+  {{input placeholder="Product name" value=product.name}}
+  <p class="right-align">Price: $ {{input placeholder="0.00" class="shorter-inline" value=product.price}}</p>
 {{/unless}}
 <ul>
   {{#unless newProduct}}
     <li {{action 'toggleNewProd'}}>New Product</li>
     <li> Edit Products</li>
   {{else}}
-    <li>New Product</li>
+    <li {{action 'submit'}}>Create new product</li>
     <li {{action 'toggleNewProd'}}>Cancel</li>
   {{/unless}}
 </ul>
