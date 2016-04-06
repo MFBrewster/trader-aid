@@ -1,6 +1,39 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+$div-width: 300px;
+
+// body {
+//   margin-top: 3em;
+// }
+
+.nav-div {
+  background-color: #FFE6C5;
+  border-color: #85B1FF;
+  border-width: 0 0 10px 0;
+  border-bottom-style: solid;
+  width: 100%;
+  padding: 3px;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.nav-list {
+  text-align: center;
+  list-style: none;
+  li {
+    display: inline;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.user-auth-box {
+  margin: 0 1em 0 1em;
+}
+
+.main-page-box {
+  margin: 0 1em 0 1em;
+}
 
 #global-header {
     border-color: #291399;
@@ -8,7 +41,7 @@
     background-color: #6A56CC;
     padding: 5px;
     margin: 0 auto;
-    width: 40%;
+    width: $div-width;
     border-style: solid;
     border-radius: 10px;
     text-align: center;

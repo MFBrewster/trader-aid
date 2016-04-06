@@ -1,24 +1,26 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    {{navbar-header}}
 
-    <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav navbar-right">
-        {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-        <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
-        {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
-        {{/if}}
-      </ul>
-    </div>
+
+<nav class="global-nav">
+  <div class="nav-div">
+    <ul class="nav-list">
+      {{#if isAuthenticated}}
+      <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+      <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+      {{else}}
+      <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+      <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+      {{/if}}
+    </ul>
   </div>
 </nav>
 
-
 <h1 id="global-header"> Trader-Aid </h1>
 
-<div class="col-md-8 col-md-offset-2">
+<div class="user-auth-box col-md-8 col-md-offset-2">
   {{outlet}}
 </div>
+{{#if isAuthenticated}}
+  <div class="main-page-box col-md-8 col-md-offset-2">
+    {{app-window}}
+  </div>
+{{/if}}
