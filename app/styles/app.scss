@@ -3,6 +3,7 @@
 
 $div-width: 300px;
 $tan: #FFE6C5;
+$base-font-size: 0.8em;
 
 
 // body {
@@ -49,9 +50,13 @@ $tan: #FFE6C5;
 
 .product-half {
   height: 30em;
-  width: $div-width * 1;
+  width: $div-width * 1.02;
   background-color: $tan * 1.05;
   position: relative;
+  padding: 1em;
+  h2 {
+    margin-top: .5em;
+  }
   ul {
     position: absolute;
     bottom: 1em;
@@ -60,24 +65,48 @@ $tan: #FFE6C5;
       border-style: solid;
       border-width: 1px;
       border-radius: 8px;
-      padding: 2px;
+      padding: 3px;
+      margin: 0 4px;
       display: inline;
     }
+    li:hover {
+      cursor: pointer;
+    }
+  }
+  .right-align {
+    margin-top: 3em;
+    position: absolute;
+    right: 1em;
+  }
+  .shorter-inline {
+    width: 40%;
+    display: inline;
+  }
+  .button-container {
+    position: absolute;
+    top: 0;
+    bottom: 3em;
+    overflow-y: scroll;
+  }
+  .header-description {
+    font-size: $base-font-size * .75;
   }
 }
 
 .product-button {
+  float: left;
   border-color: #291399;
   border-width: 5px;
   background-color: #6A56CC;
   padding: 3px;
-  margin: 0 auto;
-  width: 3em;
+  margin: .5em;
+  width: 7em;
   height: 3em;
   border-style: solid;
   border-radius: 5px;
+  font-size: $base-font-size;
   text-align: center;
-  color: #333;
+  color: #85B1FF;
 }
 
 #global-header {

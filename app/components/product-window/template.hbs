@@ -1,9 +1,24 @@
-{{#each model as |product|}}
-  <div class="product-button">
-    <p><strong>{{product.name}}</strong></p>
-  </div>
-{{/each}}
+{{#unless newProduct}}
+  <div class="button-container">
+  {{#each products as |product|}}
+    <div class="product-button">
+      <p>{{product.name}}</p>
+    </div>
+  {{/each}}
+</div>
+{{else}}
+  <h2>New Product</h2>
+  <p class="header-description">Enter a new product or service to sell</p>
+  <p>Product Name:</p>
+  {{input}}
+  <div class="right-align">Price: ${{input class="shorter-inline"}}</div>
+{{/unless}}
 <ul>
-  <li>New Product</li>
-  <li> Edit Products</li>
+  {{#unless newProduct}}
+    <li {{action 'toggleNewProd'}}>New Product</li>
+    <li> Edit Products</li>
+  {{else}}
+    <li>New Product</li>
+    <li {{action 'toggleNewProd'}}>Cancel</li>
+  {{/unless}}
 </ul>

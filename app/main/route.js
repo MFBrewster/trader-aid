@@ -6,7 +6,6 @@ export default Ember.Route.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   model() {
-    console.log("Hitting the model");
     return this.store.findAll('product');
   },
 
