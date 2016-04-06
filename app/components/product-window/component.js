@@ -16,7 +16,6 @@ export default Ember.Component.extend({
     //   this.toggleProperty('editProduct');
     // }
     submit () {
-      console.log(this.get('product'));
       this.sendAction('submit', this.get('product'));
       this.set('product', {});
       this.toggleProperty('newProduct');
