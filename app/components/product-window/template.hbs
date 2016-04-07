@@ -1,9 +1,6 @@
 {{#unless newProduct}}
 
   <div class="button-container">
-  {{#if editProduct}}
-    <p class="red-text">Click a product to edit/delete</p>
-  {{/if}}
   {{#each products as |product|}}
     <div class="product-button">
       <p>{{product.name}}</p>
@@ -25,9 +22,9 @@
 <ul>
   {{#unless newProduct}}
     <li {{action 'toggleNewProd'}}>New Product</li>
-    <li {{action 'toggleEdit'}}>{{#if editProduct}}Cancel Edit{{else}}Edit Product{{/if}}</li>
+    <li> {{#link-to 'main.edit'}}Edit Product{{/link-to}}</li>
   {{else}}
-    <li {{action 'submit'}}>Create new product</li>
+    <li {{action 'submit'}}>Create product</li>
     <li {{action 'toggleNewProd'}}>Cancel</li>
   {{/unless}}
 </ul>
