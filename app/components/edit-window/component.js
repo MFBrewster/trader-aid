@@ -23,9 +23,6 @@ export default Ember.Component.extend({
     },
     destroyProduct () {
       this.sendAction('destroyProduct', this.get('productToEdit'));
-      // this.get('productToEdit').destroyRecord().then(()=>{
-      //   this.transitionTo('main');
-      // });
     },
   },
 });

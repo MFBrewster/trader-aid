@@ -8,6 +8,9 @@ export default Ember.Component.extend({
   product: {},
 
   actions: {
+    addLineItem () {
+      
+    },
     toggleNewProd () {
       this.toggleProperty('newProduct');
       this.set('editProduct', false);

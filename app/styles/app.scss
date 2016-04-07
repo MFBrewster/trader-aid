@@ -40,20 +40,22 @@ $base-font-size: 0.8em;
 
 .main-app-window {
   float: left;
+  position: relative;
+  padding: 1em;
   border-style: solid;
   border-width: 2px;
   border-color: #CC8956 * .8;
-  height: 10em;
-  width: 4em;
   margin: 1em;
+  height: 30em;
+  width: $div-width;
+}
+
+.order-half {
+
 }
 
 .product-half {
-  height: 30em;
-  width: $div-width * 1.02;
   background-color: $tan * 1.05;
-  position: relative;
-  padding: 1em;
   h2 {
     margin-top: .5em;
   }
