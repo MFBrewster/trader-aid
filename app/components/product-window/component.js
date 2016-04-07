@@ -11,6 +11,7 @@ export default Ember.Component.extend({
     toggleNewProd () {
       this.toggleProperty('newProduct');
       this.set('editProduct', false);
+      this.set('product', {});
     },
     submit () {
       if (this.get('product.name') && this.get('product.price')) {
