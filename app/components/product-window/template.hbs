@@ -1,22 +1,31 @@
 {{#unless newProduct}}
+
   <div class="button-container">
+  {{#if editProduct}}
+    <p class="red-text">Click a product to edit/delete</p>
+  {{/if}}
   {{#each products as |product|}}
     <div class="product-button">
       <p>{{product.name}}</p>
     </div>
   {{/each}}
+
 </div>
+
 {{else}}
+
   <h2>New Product</h2>
   <p class="header-description">Enter a new product or service to sell</p>
   <p>Product Name:</p>
   {{input placeholder="Product name" value=product.name}}
   <p class="right-align">Price: $ {{input placeholder="0.00" class="shorter-inline" value=product.price}}</p>
+
 {{/unless}}
+
 <ul>
   {{#unless newProduct}}
     <li {{action 'toggleNewProd'}}>New Product</li>
-    <li> Edit Products</li>
+    <li {{action 'toggleEdit'}}>{{#if editProduct}}Cancel Edit{{else}}Edit Product{{/if}}</li>
   {{else}}
     <li {{action 'submit'}}>Create new product</li>
     <li {{action 'toggleNewProd'}}>Cancel</li>

@@ -91,6 +91,11 @@ $base-font-size: 0.8em;
   .header-description {
     font-size: $base-font-size * .75;
   }
+  .red-text {
+    color: red;
+    margin-bottom: -.18em;
+    text-align: center;
+  }
 }
 
 .product-button {
