@@ -74,8 +74,7 @@ $base-font-size: 0.8em;
     }
   }
   .right-align {
-    margin-top: 3em;
-    position: absolute;
+    margin-top: 1.5em;
     right: 1em;
   }
   .shorter-inline {
@@ -96,6 +95,19 @@ $base-font-size: 0.8em;
     margin-bottom: -.18em;
     text-align: center;
   }
+  .destroy-product {
+    margin: 2em auto;
+    text-align: center;
+    background-color: red;
+    border-style: solid;
+    border-color: red * .07;
+    border-size: 3px;
+    border-radius: 4px;
+    width: 60%;
+  }
+  .destroy-product:hover {
+    cursor: pointer;
+  }
 }
 
 .product-button {
@@ -112,6 +124,7 @@ $base-font-size: 0.8em;
   font-size: $base-font-size;
   text-align: center;
   color: #85B1FF;
+  cursor: pointer;
   overflow: hidden;
 }
 

@@ -7,5 +7,10 @@ export default Ember.Route.extend({
         this.transitionTo('main');
       });
     },
+    destroyProduct (delProduct) {
+      delProduct.destroyRecord().then(()=>{
+        this.transitionTo('main');
+      });
+    }
   },
 });

@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   classNames: ['product-half main-app-window'],
   formVisible: false,
 
+  product: {},
   productToEdit: null,
 
   actions: {
@@ -20,5 +21,11 @@ export default Ember.Component.extend({
       this.sendAction('submit', this.get('productToEdit'));
       this.set('productToEdit', null);
     },
-  }
+    destroyProduct () {
+      this.sendAction('destroyProduct', this.get('productToEdit'));
+      // this.get('productToEdit').destroyRecord().then(()=>{
+      //   this.transitionTo('main');
+      // });
+    },
+  },
 });

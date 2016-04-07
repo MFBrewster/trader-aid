@@ -3,8 +3,8 @@
   <div class="button-container">
     <p class="red-text">Click a product to edit/delete</p>
   {{#each products as |product|}}
-    <div class="product-button">
-      <p {{action 'makeEditable' product}}>{{product.name}}</p>
+    <div class="product-button" {{action 'makeEditable' product}}>
+      <p>{{product.name}}</p>
     </div>
   {{/each}}
 
@@ -17,6 +17,8 @@
   <p>Product Name:</p>
   {{input value=productToEdit.name}}
   <p class="right-align">Price: $ {{input class="shorter-inline" value=productToEdit.price}}</p>
+  <div class="destroy-product" {{action 'destroyProduct'}}>Remove This Product</div>
+
 
 {{/unless}}
 
