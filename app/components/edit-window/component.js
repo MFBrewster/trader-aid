@@ -19,7 +19,6 @@ export default Ember.Component.extend({
     submit () {
       this.sendAction('submit', this.get('productToEdit'));
       this.set('productToEdit', null);
-      // this.transitionTo('main');
     },
   }
 });
