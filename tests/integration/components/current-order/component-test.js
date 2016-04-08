@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('hamburger-menu', 'Integration | Component | hamburger menu', {
+moduleForComponent('current-order', 'Integration | Component | current order', {
   integration: true
 });
 
@@ -9,15 +9,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{hamburger-menu}}`);
+  this.render(hbs`{{current-order}}`);
 
   assert.equal(this.$().text().trim(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#hamburger-menu}}
+    {{#current-order}}
       template block text
-    {{/hamburger-menu}}
+    {{/current-order}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');

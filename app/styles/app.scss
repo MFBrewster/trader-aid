@@ -1,6 +1,179 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 
+$div-width: 300px;
+$tan: #FFE6C5;
+$base-font-size: 0.8em;
+
+
+// body {
+//   margin-top: 3em;
+// }
+
+.nav-div {
+  background-color: $tan;
+  border-color: #85B1FF;
+  border-width: 0 0 10px 0;
+  border-bottom-style: solid;
+  width: 100%;
+  padding: 3px;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.nav-list {
+  text-align: center;
+  list-style: none;
+  li {
+    display: inline;
+    padding: 0 10px 0 10px;
+  }
+}
+
+.user-auth-box {
+  margin: 0 1em 0 1em;
+}
+
+.main-page-box {
+  margin: 0 1em 0 1em;
+}
+
+.orders-button {
+    width: 50%;
+    height: 3em;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    padding-top: .8em;
+    text-align: center;
+}
+
+.closed {
+  left: 0;
+  background-color: grey;
+}
+
+.open {
+  right: 0;
+  background-color: #0FF;
+}
+
+.sub-total {
+  margin: 1em;
+  border-color: #000;
+  border-width: 3px;
+  border-style: solid;
+  height: 20em;
+  color: black;
+  overflow-x: scroll;
+}
+
+#new-sale {
+  position: absolute;
+  bottom: 3em;
+  height: 3em;
+  width: 100%;
+  background-color: $tan;
+  padding-top: .8em;
+  text-align: center;
+}
+
+.main-app-window {
+  float: left;
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #CC8956 * .8;
+  margin: 1em;
+  height: 30em;
+  width: $div-width;
+}
+
+.order-half {
+  .x-button:hover {
+    cursor: pointer;
+  }
+  li {
+    list-style-type: none;
+  }
+}
+
+.product-half {
+  background-color: $tan * 1.05;
+  padding: 1em;
+  h2 {
+    margin-top: .5em;
+  }
+  ul {
+    position: absolute;
+    bottom: 1em;
+    li {
+      border-color: black;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 8px;
+      padding: 3px;
+      margin: 0 4px;
+      display: inline;
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  }
+  .right-align {
+    margin-top: 1.5em;
+    right: 1em;
+  }
+  .shorter-inline {
+    width: 40%;
+    display: inline;
+  }
+  .button-container {
+    position: absolute;
+    top: 0;
+    bottom: 3em;
+    overflow-y: scroll;
+  }
+  .header-description {
+    font-size: $base-font-size * .75;
+  }
+  .red-text {
+    color: red;
+    margin-bottom: -.18em;
+    text-align: center;
+  }
+  .destroy-product {
+    margin: 2em auto;
+    text-align: center;
+    background-color: red;
+    border-style: solid;
+    border-color: red * .07;
+    border-size: 3px;
+    border-radius: 4px;
+    width: 60%;
+  }
+  .destroy-product:hover {
+    cursor: pointer;
+  }
+}
+
+.product-button {
+  float: left;
+  border-color: #291399;
+  border-width: 5px;
+  background-color: #6A56CC;
+  padding: 3px;
+  margin: .5em;
+  width: 7em;
+  height: 4.25em;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: $base-font-size;
+  text-align: center;
+  color: #85B1FF;
+  cursor: pointer;
+  overflow: hidden;
+}
 
 #global-header {
     border-color: #291399;
@@ -8,7 +181,7 @@
     background-color: #6A56CC;
     padding: 5px;
     margin: 0 auto;
-    width: 40%;
+    width: $div-width;
     border-style: solid;
     border-radius: 10px;
     text-align: center;

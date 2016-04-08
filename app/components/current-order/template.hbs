@@ -1,0 +1,5 @@
+<ul>
+  {{#each sale.order.products as |product|}}
+    <li><span class="x-button" {{action 'removeLineItem' product}}>[X] </span>{{product.name}}: ${{product.price}}</li>
+  {{/each}}
+</ul>

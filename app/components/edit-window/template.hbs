@@ -1,0 +1,32 @@
+{{#unless formVisible}}
+
+  <div class="button-container">
+    <p class="red-text">Click a product to edit/delete</p>
+  {{#each products as |product|}}
+    <div class="product-button" {{action 'makeEditable' product}}>
+      <p>{{product.name}}</p>
+    </div>
+  {{/each}}
+
+</div>
+
+{{else}}
+
+  <h2>Edit Product</h2>
+  <p class="header-description">Enter a new product or service to sell</p>
+  <p>Product Name:</p>
+  {{input value=productToEdit.name}}
+  <p class="right-align">Price: $ {{input class="shorter-inline" value=productToEdit.price}}</p>
+  <div class="destroy-product" {{action 'destroyProduct'}}>Remove This Product</div>
+
+
+{{/unless}}
+
+<ul>
+    {{#if formVisible}}
+      <li {{action 'submit'}}>Update product</li>
+      <li {{action 'hideForm'}}>Cancel</li>
+    {{else}}
+      <li>{{#link-to 'main'}}Cancel{{/link-to}}</li>
+    {{/if}}
+</ul>
