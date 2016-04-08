@@ -1,5 +1,5 @@
 # Trader-Aid
-![Trader-Aid](http://i.imgur.com/TB8Yc2t.png "Trader-Aid")
+![Trader-Aid](http://i.imgur.com/g7F8ODC.png "Trader-Aid")
 Portable, scalable point-of-sale solution for the small businessperson. [API repo](https://github.com/MFBrewster/trader-aid-api "API repo").
 
 ## General Approach
