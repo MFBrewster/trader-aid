@@ -38,10 +38,49 @@ $base-font-size: 0.8em;
   margin: 0 1em 0 1em;
 }
 
+.orders-button {
+    width: 50%;
+    height: 3em;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    padding-top: .8em;
+    text-align: center;
+}
+
+.closed {
+  left: 0;
+  background-color: grey;
+}
+
+.open {
+  right: 0;
+  background-color: #0FF;
+}
+
+.sub-total {
+  margin: 1em;
+  border-color: #000;
+  border-width: 3px;
+  border-style: solid;
+  height: 20em;
+  color: black;
+  overflow-x: scroll;
+}
+
+#new-sale {
+  position: absolute;
+  bottom: 3em;
+  height: 3em;
+  width: 100%;
+  background-color: $tan;
+  padding-top: .8em;
+  text-align: center;
+}
+
 .main-app-window {
   float: left;
   position: relative;
-  padding: 1em;
   border-style: solid;
   border-width: 2px;
   border-color: #CC8956 * .8;
@@ -51,11 +90,17 @@ $base-font-size: 0.8em;
 }
 
 .order-half {
-
+  .x-button:hover {
+    cursor: pointer;
+  }
+  li {
+    list-style-type: none;
+  }
 }
 
 .product-half {
   background-color: $tan * 1.05;
+  padding: 1em;
   h2 {
     margin-top: .5em;
   }

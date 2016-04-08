@@ -2,7 +2,7 @@
 
   <div class="button-container">
   {{#each products as |product|}}
-    <div class="product-button">
+    <div class="product-button" {{action 'pushProduct' product}}>
       <p>{{product.name}}</p>
     </div>
   {{/each}}
