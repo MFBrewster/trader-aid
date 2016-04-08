@@ -9,7 +9,17 @@ My approach was to first build a solid back end, and then develop my front end f
 
 The back end uses Ruby on Rails. The front end is an Ember.js app, taking advantage of Ember CLI, Bootstrap, and Sass.
 
-## User Stories, ERD, Wireframes
+## User Stories
+
+![user stories](http://i.imgur.com/uqgdyvI.png "user stories")
+
+## ERD
+
+![ERD](http://i.imgur.com/6qfty4Z.png "ERD")
+
+## Wireframe
+
+![ERD](http://i.imgur.com/btm5AdR.png "ERD")
 
 ## Unsolved Problems
 
