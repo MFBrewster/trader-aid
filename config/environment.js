@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-template',
     environment: environment,
-    baseURL: '/',
+    baseURL: 'https://git.heroku.com/trader-aid',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -40,7 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/trader-aid';
+    ENV.baseURL = 'https://git.heroku.com/trader-aid';
     ENV.locationType = 'hash';
   }
 
